@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Project2</string>
+
+    //Menu
+    <string name="OpMenSalir">Exit</string>
+    <string name="OpMenu2">Difficulty</string>
+    <string name="OpMenu1">User Data</string>
+
+    //Login Screen
+    <string name="nomActMain">Name</string>
+    <string name="PasswActMain">Password</string>
+
+    //Difficulty Level Screen
+    <string name="nivDifInter">Intermediate</string>
+    <string name="nivDifFacil">Easy</string>
+    <string name="nivDifDificil">Difficult</string>
+
+    //Common Question Buttons
+    <string name="BtnOpcionA">Option A</string>
+    <string name="BtnOpcionB">Option B</string>
+    <string name="BtnOpcionC">Option C</string>
+    <string name="BtnOpcionD">Option D</string>
+
+    //Easy Questions
+
+    //Intermediate Questions
+
+    //Difficult Questions
+</resources>
