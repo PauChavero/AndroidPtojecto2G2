@@ -1,3 +1,30 @@
 <resources>
-    <string name="app_name">ProbleMathics</string>
+    <string name="app_name">Projecto2</string>
+
+    //Menu
+    <string name="OpMenSalir">Salir</string>
+    <string name="OpMenu2">Dificultat</string>
+    <string name="OpMenu1">Dades Usuari</string>
+
+    //Pantalla Login
+    <string name="nomActMain">Nom</string>
+    <string name="PasswActMain">Contrasenya</string>
+
+    //Pantalla Nivel de Dificultad
+    <string name="nivDifInter">Intermedi</string>
+    <string name="nivDifFacil">Facil</string>
+    <string name="nivDifDificil">Dificil</string>
+
+    //Botones Comunes Preguntas
+    <string name="BtnOpcionA">Opcio A</string>
+    <string name="BtnOpcionB">Opcio B</string>
+    <string name="BtnOpcionC">Opcio C</string>
+    <string name="BtnOpcionD">Opcio D</string>
+
+
+    //Preguntas Facil
+
+    //Preguntes Intermedi
+
+    //Preguntes Dificil
 </resources>

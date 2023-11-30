@@ -12,6 +12,18 @@
         android:theme="@style/Theme.ProbleMathics"
         tools:targetApi="31">
         <activity
+            android:name=".PregDific"
+            android:exported="false" />
+        <activity
+            android:name=".PregInter"
+            android:exported="false" />
+        <activity
+            android:name=".PregFacil"
+            android:exported="false" />
+        <activity
+            android:name=".NivDificultad"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
