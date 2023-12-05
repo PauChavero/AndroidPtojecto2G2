@@ -22,6 +22,16 @@
     <string name="BtnOpcionC">Opción C</string>
     <string name="BtnOpcionD">Opción D</string>
 
+
+    //Pantalla escoger UF
+    <string name="titEscUF">Escolleix la UF que vulguis practicar</string>
+    <string name="btn1EscUF">UF 3</string>
+    <string name="btn2EscUF">UF 5</string>
+    <string name="btn3EscUF">UF 2</string>
+    <string name="btn4EscUF">UF 1</string>
+    <string name="btn5EscUF">UF 6</string>
+    <string name="btn6EscUF">UF 4</string>
+
     //Preguntas Fáciles
 
     //Preguntas Intermedias
