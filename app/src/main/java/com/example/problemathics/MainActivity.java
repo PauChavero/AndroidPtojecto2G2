@@ -60,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
                                 RespuestaAutenticacion respuesta = response.body();
                                 String mensaje = respuesta.getMensaje();
 
-                                if ("Inicio de sesión exitosa".equals(mensaje)) {
-                                    Intent intent = new Intent(MainActivity.this, EscUF.class);
+                                if ("Inicio de sesión exitoso".equals(mensaje)) {
+                                    Intent intent = new Intent(MainActivity.this, NivDificultad.class);
                                     startActivity(intent);
                                 } else {
                                     Log.d("Respuesta del servidor: ", mensaje);

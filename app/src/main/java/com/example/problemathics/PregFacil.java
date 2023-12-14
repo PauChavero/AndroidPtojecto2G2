@@ -4,16 +4,54 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class PregFacil extends AppCompatActivity {
+
+    Retrofit retrofit = new Retrofit.Builder()
+            .baseUrl("http://10.0.2.2:3001")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build();
+
+    PreguntesAppApi preguntesAppApi = retrofit.create(PreguntesAppApi.class);
+
+    PregFacil preguntes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preg_facil);
+/*
+        Call<PregFacil> call = preguntesAppApi.getPreguntes();
+        call.enqueue(new Callback<PregFacil>() {
+            @Override
+            public void onResponse(Call<PregFacil> call, Response<PregFacil> response) {
+                Log.d("msg", "Carregant les preguntes");
+                if(response.isSuccessful()){
+                    PregFacil dades = response.body();
+
+                    String titol= dades.getTitle();
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<PregFacil> call, Throwable t) {
+
+            }
+        });*/
+
     }
+
+
 
     //Overflow options menu
 
