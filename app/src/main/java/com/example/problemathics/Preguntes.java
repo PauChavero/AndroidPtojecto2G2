@@ -3,66 +3,20 @@ package com.example.problemathics;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
+import java.util.List;
 
-public class Preguntes implements Serializable {
+public class Preguntes {
+    private List<Pregunta> preguntes;
 
-
-    @SerializedName("titol")
-    private String titol;
-
-    public String getTitol() {
-        return titol;
+    public List<Pregunta> getPreguntes() {
+        return preguntes;
     }
 
-    public void setTitol(String titol) {
-        this.titol = titol;
+    public void setPreguntes(List<Pregunta> preguntes) {
+        this.preguntes = preguntes;
     }
 
+    // Constructor, getters y setters
 
-    @SerializedName("OpCioA")
-    private String OpcioA;
-
-    public String getOpcioA() {
-        return OpcioA;
-    }
-
-    public void setOpcioA(String opcioA) {
-        OpcioA = opcioA;
-    }
-
-
-    @SerializedName("OpCioB")
-    private String OpcioB;
-
-    public String getOpcioB() {
-        return OpcioB;
-    }
-
-    public void setOpcioB(String opcioB) {
-        OpcioB = opcioB;
-    }
-
-
-    @SerializedName("OpCioC")
-    private String OpcioC;
-
-    public String getOpcioC() {
-        return OpcioC;
-    }
-
-    public void setOpcioC(String opcioC) {
-        OpcioC = opcioC;
-    }
-
-
-    @SerializedName("OpCioD")
-    private String OpcioD;
-
-    public String getOpcioD() {
-        return OpcioD;
-    }
-
-    public void setOpcioD(String opcioD) {
-        OpcioD = opcioD;
-    }
+    // Puedes agregar métodos adicionales según tus necesidades
 }

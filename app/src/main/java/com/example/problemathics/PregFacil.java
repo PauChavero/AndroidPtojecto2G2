@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -38,6 +40,28 @@ public class PregFacil extends AppCompatActivity {
                 if(response.isSuccessful()){
                     Preguntes preguntes = response.body();
                     Log.d("Preguntes","recuperem les preguntes");
+
+                    if (preguntes != null && preguntes.getPreguntes() != null) {
+                        List<Pregunta> listaPreguntas = preguntes.getPreguntes();
+
+                        for (Pregunta pregunta : listaPreguntas) {
+                            Log.d("Preguntes", "ID: " + pregunta.getId());
+                            Log.d("Preguntes", "Pregunta: " + pregunta.getPregunta());
+                            Log.d("Preguntes", "Imagen: " + pregunta.getImatge());
+                            Log.d("Preguntes", "Categoria: " + pregunta.getCategoria());
+                            Log.d("Preguntes", "Dificultad: " + pregunta.getDificultat());
+                            Log.d("Preguntes", "UF: " + pregunta.getUF());
+
+                            List<Resposta> listaRespuestas = pregunta.getRespostes();
+                            for (Resposta resposta : listaRespuestas) {
+                                Log.d("Preguntes", "Respuesta: " + resposta.getResposta());
+                                Log.d("Preguntes", "Correcta: " + resposta.isCorrecta());
+                            }
+                        }
+                    } else {
+                        Log.d("Preguntes", "La lista de preguntas está vacía o nula");
+                    }
+
                 }
             }
 
