@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -58,6 +59,8 @@ public class PregFacil extends AppCompatActivity {
                                 Log.d("Preguntes", "Correcta: " + resposta.isCorrecta());
                             }
                         }
+                        TextView pregunta = findViewById(R.id.txtPreg);
+                        pregunta.setText(listaPreguntas.get(0).getPregunta());
                     } else {
                         Log.d("Preguntes", "La lista de preguntas está vacía o nula");
                     }
