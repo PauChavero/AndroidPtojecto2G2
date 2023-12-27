@@ -29,25 +29,23 @@ public class PregFacil extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preg_facil);
-/*
-        Call<PregFacil> call = preguntesAppApi.getPreguntes();
-        call.enqueue(new Callback<PregFacil>() {
+
+        Call<Preguntes> call = preguntesAppApi.getPreguntes();
+
+        call.enqueue(new Callback<Preguntes>() {
             @Override
-            public void onResponse(Call<PregFacil> call, Response<PregFacil> response) {
-                Log.d("msg", "Carregant les preguntes");
+            public void onResponse(Call<Preguntes> call, Response<Preguntes> response) {
                 if(response.isSuccessful()){
-                    PregFacil dades = response.body();
-
-                    String titol= dades.getTitle();
+                    Preguntes preguntes = response.body();
+                    Log.d("Preguntes","recuperem les preguntes");
                 }
-
             }
 
             @Override
-            public void onFailure(Call<PregFacil> call, Throwable t) {
-
+            public void onFailure(Call<Preguntes> call, Throwable t) {
+                Log.d("Preguntes","no recuperem les preguntes");
             }
-        });*/
+        });
 
     }
 
