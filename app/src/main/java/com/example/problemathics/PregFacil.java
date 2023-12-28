@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -22,7 +23,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class PregFacil extends AppCompatActivity {
     int i = 0;
     Resposta respuestaCorrecta = null;
-    List<Pregunta> listaPreguntas;
+    List<Pregunta> listaPreguntas=new ArrayList<>();;
+
+    String dificultadDeseada = "Facil";
 
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("http://10.0.2.2:3001")
@@ -49,7 +52,15 @@ public class PregFacil extends AppCompatActivity {
                     Log.d("Preguntes","recuperem les preguntes");
 
                     if (preguntes != null && preguntes.getPreguntes() != null) {
-                        listaPreguntas = preguntes.getPreguntes();
+                        List<Pregunta> listaPreguntasSinFiltrar = preguntes.getPreguntes();
+
+                        for (Pregunta pregunta : listaPreguntasSinFiltrar) {
+                            Log.d("Hola","Entro en bucle");
+                            if (pregunta.getDificultat().equals(dificultadDeseada)) {
+                                listaPreguntas.add(pregunta);
+                                Log.d("Hola","Entro en if");
+                            }
+                        }
                         mostrarPreguntaActual();
                         for (Pregunta pregunta : listaPreguntas) {
                             Log.d("Preguntes", "ID: " + pregunta.getId());
