@@ -20,7 +20,9 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class PregFacil extends AppCompatActivity {
+    int i = 0;
     Resposta respuestaCorrecta = null;
+    List<Pregunta> listaPreguntas;
 
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("http://10.0.2.2:3001")
@@ -33,6 +35,7 @@ public class PregFacil extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preg_facil);
 
@@ -46,8 +49,8 @@ public class PregFacil extends AppCompatActivity {
                     Log.d("Preguntes","recuperem les preguntes");
 
                     if (preguntes != null && preguntes.getPreguntes() != null) {
-                        List<Pregunta> listaPreguntas = preguntes.getPreguntes();
-
+                        listaPreguntas = preguntes.getPreguntes();
+                        mostrarPreguntaActual();
                         for (Pregunta pregunta : listaPreguntas) {
                             Log.d("Preguntes", "ID: " + pregunta.getId());
                             Log.d("Preguntes", "Pregunta: " + pregunta.getPregunta());
@@ -62,58 +65,8 @@ public class PregFacil extends AppCompatActivity {
                                 Log.d("Preguntes", "Correcta: " + resposta.isCorrecta());
                             }
                         }
-                        int i=0;
 
 
-                        List<Resposta> respuestas = listaPreguntas.get(i).getRespostes();
-                        for (Resposta respuesta : respuestas) {
-                            if (respuesta.isCorrecta()) {
-                                respuestaCorrecta = respuesta;
-                                break; // No es necesario continuar si ya encontramos la respuesta correcta
-                            }
-                        }
-                        TextView pregunta = findViewById(R.id.txtPreg);
-                        Button opcioA = findViewById(R.id.OpCioA);
-                        Button opcioB = findViewById(R.id.OpCioB);
-                        Button opcioC = findViewById(R.id.OpCioC);
-                        Button opcioD = findViewById(R.id.OpCioD);
-
-                        pregunta.setText(listaPreguntas.get(i).getPregunta());
-                        opcioA.setText(listaPreguntas.get(i).getRespostes().get(0).getResposta());
-                        opcioB.setText(listaPreguntas.get(i).getRespostes().get(1).getResposta());
-                        opcioC.setText(listaPreguntas.get(i).getRespostes().get(2).getResposta());
-                        opcioD.setText(listaPreguntas.get(i).getRespostes().get(3).getResposta());
-
-                        opcioA.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                comprobarRespuesta(opcioA.getText().toString());
-                            }
-                        });
-
-                        opcioB.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                comprobarRespuesta(opcioB.getText().toString());
-                            }
-                        });
-
-                        opcioC.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                comprobarRespuesta(opcioC.getText().toString());
-                            }
-                        });
-
-                        opcioD.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                comprobarRespuesta(opcioD.getText().toString());
-                            }
-                        });
-
-                    } else {
-                        Log.d("Preguntes", "La lista de preguntas está vacía o nula");
                     }
 
                 }
@@ -126,10 +79,58 @@ public class PregFacil extends AppCompatActivity {
         });
 
     }
+    private void mostrarPreguntaActual() {
+        if (i < listaPreguntas.size()) {
+            List<Resposta> respuestas = listaPreguntas.get(i).getRespostes();
+            for (Resposta respuesta : respuestas) {
+                if (respuesta.isCorrecta()) {
+                    respuestaCorrecta = respuesta;
+                    break;
+                }
+            }
 
+            TextView pregunta = findViewById(R.id.txtPreg);
+            Button opcioA = findViewById(R.id.OpCioA);
+            Button opcioB = findViewById(R.id.OpCioB);
+            Button opcioC = findViewById(R.id.OpCioC);
+            Button opcioD = findViewById(R.id.OpCioD);
 
+            pregunta.setText(listaPreguntas.get(i).getPregunta());
+            opcioA.setText(respuestas.get(0).getResposta());
+            opcioB.setText(respuestas.get(1).getResposta());
+            opcioC.setText(respuestas.get(2).getResposta());
+            opcioD.setText(respuestas.get(3).getResposta());
 
-    //Overflow options menu
+            opcioA.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    comprobarRespuesta(opcioA.getText().toString());
+                }
+            });
+
+            opcioB.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    comprobarRespuesta(opcioB.getText().toString());
+                }
+            });
+
+            opcioC.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    comprobarRespuesta(opcioC.getText().toString());
+                }
+            });
+
+            opcioD.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    comprobarRespuesta(opcioD.getText().toString());
+                }
+            });
+        }
+    }
+
     private void comprobarRespuesta(String respuestaSeleccionada) {
         // Comparar la respuesta seleccionada con la respuesta correcta
         if (respuestaCorrecta != null && respuestaSeleccionada.equals(respuestaCorrecta.getResposta())) {
@@ -142,8 +143,14 @@ public class PregFacil extends AppCompatActivity {
             Log.d("Respuesta", "Respuesta incorrecta");
         }
 
-        // Avanzar a la siguiente pregunta o realizar otras acciones según tus necesidades
+        // Avanzar a la siguiente pregunta
+        i++;
+        mostrarPreguntaActual();
     }
+
+
+    //Overflow options menu
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
