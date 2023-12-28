@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
@@ -18,6 +20,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class PregFacil extends AppCompatActivity {
+    Resposta respuestaCorrecta = null;
 
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("http://10.0.2.2:3001")
@@ -59,8 +62,56 @@ public class PregFacil extends AppCompatActivity {
                                 Log.d("Preguntes", "Correcta: " + resposta.isCorrecta());
                             }
                         }
+                        int i=0;
+
+
+                        List<Resposta> respuestas = listaPreguntas.get(i).getRespostes();
+                        for (Resposta respuesta : respuestas) {
+                            if (respuesta.isCorrecta()) {
+                                respuestaCorrecta = respuesta;
+                                break; // No es necesario continuar si ya encontramos la respuesta correcta
+                            }
+                        }
                         TextView pregunta = findViewById(R.id.txtPreg);
-                        pregunta.setText(listaPreguntas.get(0).getPregunta());
+                        Button opcioA = findViewById(R.id.OpCioA);
+                        Button opcioB = findViewById(R.id.OpCioB);
+                        Button opcioC = findViewById(R.id.OpCioC);
+                        Button opcioD = findViewById(R.id.OpCioD);
+
+                        pregunta.setText(listaPreguntas.get(i).getPregunta());
+                        opcioA.setText(listaPreguntas.get(i).getRespostes().get(0).getResposta());
+                        opcioB.setText(listaPreguntas.get(i).getRespostes().get(1).getResposta());
+                        opcioC.setText(listaPreguntas.get(i).getRespostes().get(2).getResposta());
+                        opcioD.setText(listaPreguntas.get(i).getRespostes().get(3).getResposta());
+
+                        opcioA.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                comprobarRespuesta(opcioA.getText().toString());
+                            }
+                        });
+
+                        opcioB.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                comprobarRespuesta(opcioB.getText().toString());
+                            }
+                        });
+
+                        opcioC.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                comprobarRespuesta(opcioC.getText().toString());
+                            }
+                        });
+
+                        opcioD.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                comprobarRespuesta(opcioD.getText().toString());
+                            }
+                        });
+
                     } else {
                         Log.d("Preguntes", "La lista de preguntas está vacía o nula");
                     }
@@ -79,7 +130,20 @@ public class PregFacil extends AppCompatActivity {
 
 
     //Overflow options menu
+    private void comprobarRespuesta(String respuestaSeleccionada) {
+        // Comparar la respuesta seleccionada con la respuesta correcta
+        if (respuestaCorrecta != null && respuestaSeleccionada.equals(respuestaCorrecta.getResposta())) {
+            // La respuesta es correcta
+            // Puedes realizar acciones adicionales aquí
+            Log.d("Respuesta", "¡Respuesta correcta!");
+        } else {
+            // La respuesta es incorrecta
+            // Puedes realizar acciones adicionales aquí
+            Log.d("Respuesta", "Respuesta incorrecta");
+        }
 
+        // Avanzar a la siguiente pregunta o realizar otras acciones según tus necesidades
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
