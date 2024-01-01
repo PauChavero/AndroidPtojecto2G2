@@ -23,6 +23,8 @@ public class NivDificultad extends AppCompatActivity {
 
         Button btnDific = findViewById(R.id.btnDificil);
 
+        Button Jungla = findViewById(R.id.Jungla);
+
         btnFacil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +45,14 @@ public class NivDificultad extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(NivDificultad.this, PregDific.class);
+                startActivity(intent);
+            }
+        });
+
+        Jungla.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NivDificultad.this, Jungla.class);
                 startActivity(intent);
             }
         });
