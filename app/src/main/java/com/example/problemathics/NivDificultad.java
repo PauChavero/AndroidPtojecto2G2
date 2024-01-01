@@ -8,11 +8,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class NivDificultad extends AppCompatActivity {
 
+    private RadioGroup radioGroup;
+    private Button Jugar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_niv_dificultad);
 
@@ -24,6 +30,10 @@ public class NivDificultad extends AppCompatActivity {
         Button btnDific = findViewById(R.id.btnDificil);
 
         Button Jungla = findViewById(R.id.Jungla);
+
+        radioGroup = findViewById(R.id.radioGroup);
+
+        Jugar = findViewById(R.id.Jugar);
 
         btnFacil.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +66,31 @@ public class NivDificultad extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Jugar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int radioButtonId = radioGroup.getCheckedRadioButtonId();
+                if (radioButtonId != -1) {
+                    RadioButton radioButton = findViewById(radioButtonId);
+                    String dificultadSeleccionada = radioButton.getText().toString();
+
+                    // Según la opción seleccionada, inicia la actividad correspondiente
+                    if (dificultadSeleccionada.equals("Facil")) {
+                        startActivity(new Intent(NivDificultad.this, PregFacil.class));
+                    } else if (dificultadSeleccionada.equals("Intermedi")) {
+                        startActivity(new Intent(NivDificultad.this, PregInter.class));
+                    } else if (dificultadSeleccionada.equals("Dificil")) {
+                        startActivity(new Intent(NivDificultad.this, PregDific.class));
+                    }
+                } else {
+                    // Muestra un Toast si no se ha seleccionado ninguna opción
+                    Toast.makeText(NivDificultad.this, "Selecciona una dificultad", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+
     }
     //Overflow options menu
 

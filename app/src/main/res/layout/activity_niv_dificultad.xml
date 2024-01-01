@@ -51,6 +51,49 @@
         android:text="Jungla"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDificil" />
+        app:layout_constraintTop_toBottomOf="@+id/btnDificil"
+        app:layout_constraintVertical_bias="0.257" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btnFacil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonFacil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Facil" />
+
+        <RadioButton
+            android:id="@+id/radioButtonIntermedi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Intermedi" />
+
+        <RadioButton
+            android:id="@+id/radioButtonDificil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dificil" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/Jugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jugar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.333" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
