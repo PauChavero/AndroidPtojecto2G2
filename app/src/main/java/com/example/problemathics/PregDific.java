@@ -28,6 +28,9 @@ public class PregDific extends AppCompatActivity {
 
     String dificultadDeseada = "Difícil";
 
+    String ufSeleccionadaInt = "";
+
+
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("http://10.0.2.2:3001")
             .addConverterFactory(GsonConverterFactory.create())
@@ -39,7 +42,22 @@ public class PregDific extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        Intent intent = getIntent();
+        String ufSeleccionada = intent.getStringExtra("ufSeleccionada");
+        Log.d("uf",ufSeleccionada);
+        if(ufSeleccionada.equals("Uf1")){
+            ufSeleccionadaInt="1";
+        }else if(ufSeleccionada=="Uf2"){
+            ufSeleccionadaInt="2";
+        }else if(ufSeleccionada=="Uf3"){
+            ufSeleccionadaInt="3";
+        }else if(ufSeleccionada=="Uf4"){
+            ufSeleccionadaInt="4";
+        }else if(ufSeleccionada=="Uf5"){
+            ufSeleccionadaInt="5";
+        }else if(ufSeleccionada=="Uf6"){
+            ufSeleccionadaInt="6";
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preg_facil);
 
@@ -54,14 +72,25 @@ public class PregDific extends AppCompatActivity {
 
                     if (preguntes != null && preguntes.getPreguntes() != null) {
                         List<Pregunta> listaPreguntasSinFiltrar = preguntes.getPreguntes();
+                        List<Pregunta> listaPreguntasSinUf = new ArrayList<>();
 
                         for (Pregunta pregunta : listaPreguntasSinFiltrar) {
                             Log.d("Hola","Entro en bucle");
                             if (pregunta.getDificultat().equals(dificultadDeseada)) {
+                                listaPreguntasSinUf.add(pregunta);
+                                Log.d("Hola","Entro en if");
+                            }
+                        }
+
+                        for (Pregunta pregunta : listaPreguntasSinUf) {
+                            Log.d("Hola","Entro en bucle"+ pregunta.getUF());
+                            Log.d("Hola",ufSeleccionadaInt);
+                            if (pregunta.getUF().equals(ufSeleccionadaInt)) {
                                 listaPreguntas.add(pregunta);
                                 Log.d("Hola","Entro en if");
                             }
                         }
+
                         mostrarPreguntaActual();
                         for (Pregunta pregunta : listaPreguntas) {
                             Log.d("Preguntes", "ID: " + pregunta.getId());

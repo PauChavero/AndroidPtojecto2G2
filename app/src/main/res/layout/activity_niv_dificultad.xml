@@ -8,43 +8,6 @@
     tools:context=".NivDificultad">
 
     <Button
-        android:id="@+id/btnIntermedi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="159dp"
-        android:text="@string/nivDifInter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFacil" />
-
-    <Button
-        android:id="@+id/btnFacil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="276dp"
-        android:layout_marginEnd="159dp"
-        android:text="@string/nivDifFacil"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnDificil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="161dp"
-        android:text="@string/nivDifDificil"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIntermedi" />
-
-    <Button
         android:id="@+id/Jungla"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,17 +16,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDificil"
-        app:layout_constraintVertical_bias="0.257" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/btnFacil"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.189">
 
         <RadioButton
             android:id="@+id/radioButtonFacil"
@@ -94,6 +59,54 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintVertical_bias="0.525" />
+
+    <RadioGroup
+        android:id="@+id/radioGruopUfs"
+        android:layout_width="165dp"
+        android:layout_height="293dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.829"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079">
+
+        <RadioButton
+            android:id="@+id/Uf1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uf1" />
+
+        <RadioButton
+            android:id="@+id/Uf2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uf2" />
+
+        <RadioButton
+            android:id="@+id/Uf3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uf3" />
+
+        <RadioButton
+            android:id="@+id/Uf4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uf4" />
+
+        <RadioButton
+            android:id="@+id/Uf5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uf5" />
+
+        <RadioButton
+            android:id="@+id/Uf6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uf6" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

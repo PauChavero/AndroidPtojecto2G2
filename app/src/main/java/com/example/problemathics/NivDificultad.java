@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +16,8 @@ import android.widget.Toast;
 public class NivDificultad extends AppCompatActivity {
 
     private RadioGroup radioGroup;
+
+    private RadioGroup radioUf;
     private Button Jugar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,42 +25,13 @@ public class NivDificultad extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_niv_dificultad);
 
-
-        Button btnFacil = findViewById(R.id.btnFacil);
-
-        Button btnInter = findViewById(R.id.btnIntermedi);
-
-        Button btnDific = findViewById(R.id.btnDificil);
-
         Button Jungla = findViewById(R.id.Jungla);
 
         radioGroup = findViewById(R.id.radioGroup);
 
+        radioUf = findViewById(R.id.radioGruopUfs);
+
         Jugar = findViewById(R.id.Jugar);
-
-        btnFacil.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(NivDificultad.this, PregFacil.class);
-                startActivity(intent);
-            }
-        });
-
-        btnInter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(NivDificultad.this, PregInter.class);
-                startActivity(intent);
-            }
-        });
-
-        btnDific.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(NivDificultad.this, PregDific.class);
-                startActivity(intent);
-            }
-        });
 
         Jungla.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,22 +44,36 @@ public class NivDificultad extends AppCompatActivity {
         Jugar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 int radioButtonId = radioGroup.getCheckedRadioButtonId();
-                if (radioButtonId != -1) {
+                int radioButtonUfId = radioUf.getCheckedRadioButtonId();
+
+                if (radioButtonId != -1 && radioButtonUfId != -1) {
+
                     RadioButton radioButton = findViewById(radioButtonId);
+                    RadioButton radioButtonUf = findViewById(radioButtonUfId);
                     String dificultadSeleccionada = radioButton.getText().toString();
+                    String ufSeleccionada = radioButtonUf.getText().toString();
 
                     // Según la opción seleccionada, inicia la actividad correspondiente
                     if (dificultadSeleccionada.equals("Facil")) {
-                        startActivity(new Intent(NivDificultad.this, PregFacil.class));
+                        Intent intent = new Intent(NivDificultad.this, PregFacil.class);
+                        Log.d("Uf",ufSeleccionada);
+                        intent.putExtra("ufSeleccionada", ufSeleccionada);
+                        startActivity(intent);
                     } else if (dificultadSeleccionada.equals("Intermedi")) {
-                        startActivity(new Intent(NivDificultad.this, PregInter.class));
+                        Intent intent = new Intent(NivDificultad.this, PregInter.class);
+                        intent.putExtra("ufSeleccionada", ufSeleccionada);
+                        startActivity(intent);
                     } else if (dificultadSeleccionada.equals("Dificil")) {
-                        startActivity(new Intent(NivDificultad.this, PregDific.class));
+                        Intent intent = new Intent(NivDificultad.this, PregDific.class);
+                        intent.putExtra("ufSeleccionada", ufSeleccionada);
+                        startActivity(intent);
                     }
+
                 } else {
                     // Muestra un Toast si no se ha seleccionado ninguna opción
-                    Toast.makeText(NivDificultad.this, "Selecciona una dificultad", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(NivDificultad.this, "Selecciona una dificultad i UF", Toast.LENGTH_SHORT).show();
                 }
             }
         });
