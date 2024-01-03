@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import retrofit2.Call;
@@ -67,11 +68,13 @@ public class PregDific extends AppCompatActivity {
             @Override
             public void onResponse(Call<Preguntes> call, Response<Preguntes> response) {
                 if(response.isSuccessful()){
-                    Preguntes preguntes = response.body();
+                    Preguntes preguntesOrdenades = response.body();
+                    List<Pregunta> preguntes = preguntesOrdenades.getPreguntes();
+                    Collections.shuffle(preguntes);
                     Log.d("Preguntes","recuperem les preguntes");
 
-                    if (preguntes != null && preguntes.getPreguntes() != null) {
-                        List<Pregunta> listaPreguntasSinFiltrar = preguntes.getPreguntes();
+                    if (preguntes != null) {
+                        List<Pregunta> listaPreguntasSinFiltrar = preguntes;
                         List<Pregunta> listaPreguntasSinUf = new ArrayList<>();
 
                         for (Pregunta pregunta : listaPreguntasSinFiltrar) {
