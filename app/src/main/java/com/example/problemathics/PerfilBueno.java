@@ -1,27 +1,14 @@
 package com.example.problemathics;
 
-import android.content.Intent;
-import android.os.Bundle;
-
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.problemathics.databinding.ActivityPerfilBinding;
-
-import org.w3c.dom.Text;
-
-public class Perfil extends AppCompatActivity {
+public class PerfilBueno extends AppCompatActivity {
 
     TextView nomUsuari;
     TextView email;
@@ -64,12 +51,12 @@ public class Perfil extends AppCompatActivity {
         int id= item.getItemId();
 
         if(id == R.id.OpMenu1) {
-            Intent intent = new Intent(Perfil.this, Perfil.class);
+            Intent intent = new Intent(PerfilBueno.this, Perfil.class);
             startActivity(intent);
 
 
         }else if(id == R.id.OpMenu2){
-            Intent intent = new Intent(Perfil.this,NivDificultad.class);
+            Intent intent = new Intent(PerfilBueno.this,NivDificultad.class);
             startActivity(intent);
 
         }
@@ -80,4 +67,6 @@ public class Perfil extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }

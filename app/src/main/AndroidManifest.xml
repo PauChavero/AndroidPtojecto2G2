@@ -16,10 +16,8 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".Perfil"
-            android:exported="false"
-            android:label="@string/title_activity_perfil"
-            android:theme="@style/Theme.ProbleMathics.NoActionBar" />
+            android:name=".PerfilBueno"
+            android:exported="false" />
         <activity
             android:name=".Jungla"
             android:exported="false" />

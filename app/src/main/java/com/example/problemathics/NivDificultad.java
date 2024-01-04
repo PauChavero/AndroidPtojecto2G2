@@ -94,7 +94,7 @@ public class NivDificultad extends AppCompatActivity {
         int id= item.getItemId();
 
         if(id == R.id.OpMenu1) {
-            Intent intent = new Intent(NivDificultad.this, Perfil.class);
+            Intent intent = new Intent(NivDificultad.this, PerfilBueno.class);
             startActivity(intent);
 
 
