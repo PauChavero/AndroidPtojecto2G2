@@ -29,6 +29,15 @@
     <string name="btn4EscUF">UF 1</string>
     <string name="btn5EscUF">UF 6</string>
     <string name="btn6EscUF">UF 4</string>
+    <string name="title_activity_perfil">Perfil</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
 
     //Preguntas Facil

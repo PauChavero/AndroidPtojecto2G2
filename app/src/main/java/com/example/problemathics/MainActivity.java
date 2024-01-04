@@ -61,6 +61,39 @@ public class MainActivity extends AppCompatActivity {
                                 String mensaje = respuesta.getMensaje();
 
                                 if ("Inicio de sesión exitoso".equals(mensaje)) {
+
+                                    Retrofit retrofit2 = new Retrofit.Builder()
+                                            .baseUrl("http://10.0.2.2:3001")
+                                            .addConverterFactory(GsonConverterFactory.create())
+                                            .build();
+
+                                    usuariApi usuariApi = retrofit2.create(usuariApi.class);
+
+                                    Call<Usuari> callUsuari = usuariApi.usuariActual(username);
+
+                                    callUsuari.enqueue(new Callback<Usuari>() {
+                                        @Override
+                                        public void onResponse(Call<Usuari> call, Response<Usuari> response) {
+                                            if (response.isSuccessful()) {
+                                                Usuari nuevoUsuari = response.body();
+                                                Log.e("usuari", nuevoUsuari.getEmail());
+                                                if (nuevoUsuari != null) {
+                                                    ((variableGlobalUsuari) getApplication()).setUsuari(nuevoUsuari);
+                                                } else {
+                                                    Log.e("usuari", "Response body is null");
+                                                }
+                                            } else {
+                                                Log.e("usuari", "Unsuccessful response. Code: " + response.code());
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onFailure(Call<Usuari> call, Throwable t) {
+                                            Log.e("usuari", "Error recuperant usuari", t);
+                                        }
+                                    });
+
+
                                     Intent intent = new Intent(MainActivity.this, NivDificultad.class);
                                     startActivity(intent);
                                 } else {
