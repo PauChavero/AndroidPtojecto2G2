@@ -19,7 +19,7 @@ public class PerfilBueno extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_perfil);
+        setContentView(R.layout.activity_perfil_bueno);
 
         nomUsuari = findViewById(R.id.nomUsuari);
         email = findViewById(R.id.email);
@@ -51,7 +51,7 @@ public class PerfilBueno extends AppCompatActivity {
         int id= item.getItemId();
 
         if(id == R.id.OpMenu1) {
-            Intent intent = new Intent(PerfilBueno.this, Perfil.class);
+            Intent intent = new Intent(PerfilBueno.this, PerfilBueno.class);
             startActivity(intent);
 
 
