@@ -18,7 +18,7 @@ public class NivDificultad extends AppCompatActivity {
     private RadioGroup radioGroup;
 
     private RadioGroup radioUf;
-    private Button Jugar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -31,7 +31,7 @@ public class NivDificultad extends AppCompatActivity {
 
         radioUf = findViewById(R.id.radioGruopUfs);
 
-        Jugar = findViewById(R.id.Jugar);
+        Button Jugar = findViewById(R.id.Jugar);
 
         Jungla.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +56,7 @@ public class NivDificultad extends AppCompatActivity {
                     String ufSeleccionada = radioButtonUf.getText().toString();
 
                     // Según la opción seleccionada, inicia la actividad correspondiente
+                    Log.d("Seleccionada",dificultadSeleccionada);
                     if (dificultadSeleccionada.equals("Facil")) {
                         Intent intent = new Intent(NivDificultad.this, PregFacil.class);
                         Log.d("Uf",ufSeleccionada);
