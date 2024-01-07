@@ -57,16 +57,16 @@ public class NivDificultad extends AppCompatActivity {
 
                     // Según la opción seleccionada, inicia la actividad correspondiente
                     Log.d("Seleccionada",dificultadSeleccionada);
-                    if (dificultadSeleccionada.equals("Facil")) {
+                    if (dificultadSeleccionada.equals("Facil") || dificultadSeleccionada.equals("Easy") || dificultadSeleccionada.equals("Fácil")) {
                         Intent intent = new Intent(NivDificultad.this, PregFacil.class);
                         Log.d("Uf",ufSeleccionada);
                         intent.putExtra("ufSeleccionada", ufSeleccionada);
                         startActivity(intent);
-                    } else if (dificultadSeleccionada.equals("Intermedi")) {
+                    } else if (dificultadSeleccionada.equals("Intermedi") || dificultadSeleccionada.equals("Intermediate") || dificultadSeleccionada.equals("Intermedio")) {
                         Intent intent = new Intent(NivDificultad.this, PregInter.class);
                         intent.putExtra("ufSeleccionada", ufSeleccionada);
                         startActivity(intent);
-                    } else if (dificultadSeleccionada.equals("Dificil")) {
+                    } else if (dificultadSeleccionada.equals("Dificil") || dificultadSeleccionada.equals("Difficult") || dificultadSeleccionada.equals("Difícil")) {
                         Intent intent = new Intent(NivDificultad.this, PregDific.class);
                         intent.putExtra("ufSeleccionada", ufSeleccionada);
                         startActivity(intent);
