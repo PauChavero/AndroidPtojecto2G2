@@ -22,9 +22,6 @@
             android:name=".Jungla"
             android:exported="false" />
         <activity
-            android:name=".EscUF"
-            android:exported="false" />
-        <activity
             android:name=".PregDific"
             android:exported="false" />
         <activity
