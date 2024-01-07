@@ -1,7 +1,9 @@
 package com.example.problemathics;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,15 +26,17 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class PregInter extends AppCompatActivity {
 
     int i = 0;
+
+    int vidas = 3;
+    int limitePreguntas = 10;
     Resposta respuestaCorrecta = null;
     List<Pregunta> listaPreguntas=new ArrayList<>();;
 
     String dificultadDeseada = "Mitja";
 
+    TextView textVidas;
+
     String ufSeleccionadaInt = "";
-
-
-
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("http://10.0.2.2:3001")
             .addConverterFactory(GsonConverterFactory.create())
@@ -46,6 +50,7 @@ public class PregInter extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = getIntent();
         String ufSeleccionada = intent.getStringExtra("ufSeleccionada");
+
         Log.d("uf",ufSeleccionada);
         if(ufSeleccionada.equals("Uf1")){
             ufSeleccionadaInt="1";
@@ -62,7 +67,8 @@ public class PregInter extends AppCompatActivity {
         }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preg_facil);
-
+        textVidas = findViewById(R.id.textVidas);
+        textVidas.setText(String.valueOf("Vidas: "+vidas));
         Call<Preguntes> call = preguntesAppApi.getPreguntes();
 
         call.enqueue(new Callback<Preguntes>() {
@@ -124,7 +130,7 @@ public class PregInter extends AppCompatActivity {
 
     }
     private void mostrarPreguntaActual() {
-        if (i < listaPreguntas.size()) {
+        if (i < listaPreguntas.size() && vidas > 0 && i < limitePreguntas) {
             List<Resposta> respuestas = listaPreguntas.get(i).getRespostes();
             for (Resposta respuesta : respuestas) {
                 if (respuesta.isCorrecta()) {
@@ -184,13 +190,43 @@ public class PregInter extends AppCompatActivity {
         } else {
             // La respuesta es incorrecta
             // Puedes realizar acciones adicionales aquí
+            vidas--;
+            textVidas = findViewById(R.id.textVidas);
+            textVidas.setText(String.valueOf("Vidas: "+vidas));
             Log.d("Respuesta", "Respuesta incorrecta");
+
+            if (vidas == 0) {
+                // El jugador se quedó sin vidas, puedes realizar acciones adicionales aquí
+                Log.d("Fin del juego", "Se quedó sin vidas");
+                mostrarDialogoFinJuego();
+            }
         }
 
         // Avanzar a la siguiente pregunta
         i++;
         mostrarPreguntaActual();
     }
+
+    private void mostrarDialogoFinJuego() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("¡Juego terminado!")
+                .setMessage("Te has quedado sin vidas. ¿Quieres volver al menú principal?")
+                .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        volverAlMenuPrincipal();
+                    }
+                })
+
+                .show();
+    }
+
+    private void volverAlMenuPrincipal() {
+        Intent intent = new Intent(this, NivDificultad.class); // Reemplaza "MenuPrincipal" con el nombre correcto de tu actividad principal
+        startActivity(intent);
+    }
+
+
+    //Overflow options menu
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
