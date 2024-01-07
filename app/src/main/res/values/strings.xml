@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Projecto2</string>
+    <string name="app_name">ProbleMathics</string>
 
     //Menu
-    <string name="OpMenSalir">Salir</string>
+    <string name="OpMenSalir">Sortir</string>
     <string name="OpMenu2">Dificultat</string>
     <string name="OpMenu1">Dades Usuari</string>
 
@@ -23,24 +23,22 @@
 
     //Pantalla escoger UF
     <string name="titEscUF">Escolleix la UF que vulguis practicar</string>
-    <string name="btn1EscUF">UF 3</string>
-    <string name="btn2EscUF">UF 5</string>
-    <string name="btn3EscUF">UF 2</string>
-    <string name="btn4EscUF">UF 1</string>
-    <string name="btn5EscUF">UF 6</string>
-    <string name="btn6EscUF">UF 4</string>
-    <string name="title_activity_perfil">Perfil</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="btn1EscUF">UF 1</string>
+    <string name="btn2EscUF">UF 2</string>
+    <string name="btn3EscUF">UF 3</string>
+    <string name="btn4EscUF">UF 4</string>
+    <string name="btn5EscUF">UF 5</string>
+    <string name="btn6EscUF">UF 6</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="perfil">Perfil</string>
+    <string name="Jungla">Jungla</string>
+    <string name="Jugar">Jugar</string>
 
-
+    <string name="PerfilUsuari">Usuari:</string>
+    <string name="PerfilEmail">Email:</string>
+    <string name="PerfilPuntuacioSingle">Puntuació SinglePlayer:</string>
+    <string name="PerfilElo">Elo Multijugador:</string>
+    <string name="PerfilGuanyades">Partides Guanyades:</string>
+    <string name="PerfilPerdudes">Partides Perdudes:</string>
     //Preguntas Facil
 
     //Preguntes Intermedi

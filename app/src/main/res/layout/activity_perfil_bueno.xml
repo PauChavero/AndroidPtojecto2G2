@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#5FAAB1"
-    tools:context=".Perfil" >
+    tools:context=".PerfilBueno" >
 
     <TextView
         android:id="@+id/nomUsuari"
@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="180dp"
-        android:text="Usuari:"
+        android:text="@string/PerfilUsuari"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="205dp"
-        android:text="Email:"
+        android:text="@string/PerfilEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -93,7 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="230dp"
-        android:text="Puntuació SinglePlayer:"
+        android:text="@string/PerfilPuntuacioSingle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -103,7 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="255dp"
-        android:text="Elo Multijugador:"
+        android:text="@string/PerfilElo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -113,7 +113,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="280dp"
-        android:text="Partides Guanyades:"
+        android:text="@string/PerfilGuanyades"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -123,7 +123,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="305dp"
-        android:text="Partides Perdudes:"
+        android:text="@string/PerfilPerdudes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
