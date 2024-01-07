@@ -11,7 +11,7 @@
         android:id="@+id/Jungla"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Jungla"
+        android:text="Jungla"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -34,19 +34,19 @@
             android:id="@+id/radioButtonFacil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/nivDifFacil" />
+            android:text="Facil" />
 
         <RadioButton
             android:id="@+id/radioButtonIntermedi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/nivDifInter" />
+            android:text="Intermedi" />
 
         <RadioButton
             android:id="@+id/radioButtonDificil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/nivDifDificil" />
+            android:text="Dificil" />
     </RadioGroup>
 
     <Button
@@ -76,37 +76,37 @@
             android:id="@+id/Uf1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btn1EscUF" />
+            android:text="Uf1" />
 
         <RadioButton
             android:id="@+id/Uf2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btn2EscUF" />
+            android:text="Uf2" />
 
         <RadioButton
             android:id="@+id/Uf3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btn3EscUF" />
+            android:text="Uf3" />
 
         <RadioButton
             android:id="@+id/Uf4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btn4EscUF" />
+            android:text="Uf4" />
 
         <RadioButton
             android:id="@+id/Uf5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btn5EscUF" />
+            android:text="Uf5" />
 
         <RadioButton
             android:id="@+id/Uf6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btn6EscUF" />
+            android:text="Uf6" />
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

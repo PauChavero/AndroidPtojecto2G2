@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ProbleMathics</string>
+    <string name="app_name">Project2</string>
 
     //Menu
     <string name="OpMenSalir">Exit</string>
@@ -24,20 +24,16 @@
 
     //Pantalla escoger UF
     <string name="titEscUF">Escolleix la UF que vulguis practicar</string>
-    <string name="btn1EscUF">UF 1</string>
-    <string name="btn2EscUF">UF 2</string>
-    <string name="btn3EscUF">UF 3</string>
-    <string name="btn4EscUF">UF 4</string>
-    <string name="btn5EscUF">UF 5</string>
-    <string name="btn6EscUF">UF 6</string>
+    <string name="btn1EscUF">UF 3</string>
+    <string name="btn2EscUF">UF 5</string>
+    <string name="btn3EscUF">UF 2</string>
+    <string name="btn4EscUF">UF 1</string>
+    <string name="btn5EscUF">UF 6</string>
+    <string name="btn6EscUF">UF 4</string>
 
-    <string name="Jungla">Jungle</string>
-    <string name="Jugar">Play</string>
+    //Easy Questions
 
-    <string name="PerfilUsuari">User:</string>
-    <string name="PerfilEmail">Email:</string>
-    <string name="PerfilPuntuacioSingle">Punctuation SinglePlayer:</string>
-    <string name="PerfilElo">Elo Multiplayer:</string>
-    <string name="PerfilGuanyades">Games Won:</string>
-    <string name="PerfilPerdudes">Games Lost:</string>
+    //Intermediate Questions
+
+    //Difficult Questions
 </resources>
