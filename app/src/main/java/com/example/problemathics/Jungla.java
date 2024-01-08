@@ -1,7 +1,9 @@
 package com.example.problemathics;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,6 +26,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Jungla extends AppCompatActivity {
 
     int i = 0;
+    int vidas = 3;
     Resposta respuestaCorrecta = null;
     List<Pregunta> listaPreguntas=new ArrayList<>();;
 
@@ -147,12 +150,39 @@ public class Jungla extends AppCompatActivity {
         } else {
             // La respuesta es incorrecta
             // Puedes realizar acciones adicionales aquí
+            vidas--;
+            textVidas = findViewById(R.id.textVidas);
+            textVidas.setText(String.valueOf("Vidas: "+vidas));
             Log.d("Respuesta", "Respuesta incorrecta");
+
+            if (vidas == 0) {
+                // El jugador se quedó sin vidas, puedes realizar acciones adicionales aquí
+                Log.d("Fin del juego", "Se quedó sin vidas");
+                mostrarDialogoFinJuego();
+            }
         }
 
         // Avanzar a la siguiente pregunta
         i++;
         mostrarPreguntaActual();
+    }
+
+    private void mostrarDialogoFinJuego() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.titFinJuego)
+                .setMessage(R.string.VidasAcabadas)
+                .setPositiveButton(R.string.RespuestaFinJuego, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        volverAlMenuPrincipal();
+                    }
+                })
+
+                .show();
+    }
+
+    private void volverAlMenuPrincipal() {
+        Intent intent = new Intent(this, NivDificultad.class); // Reemplaza "MenuPrincipal" con el nombre correcto de tu actividad principal
+        startActivity(intent);
     }
 
 
@@ -170,7 +200,7 @@ public class Jungla extends AppCompatActivity {
         int id= item.getItemId();
 
         if(id == R.id.OpMenu1) {
-            Intent intent = new Intent(Jungla.this, NivDificultad.class);
+            Intent intent = new Intent(Jungla.this,PerfilBueno.class);
             startActivity(intent);
 
 

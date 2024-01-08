@@ -238,7 +238,7 @@ public class PregFacil extends AppCompatActivity {
         int id= item.getItemId();
 
         if(id == R.id.OpMenu1) {
-            Intent intent = new Intent(PregFacil.this, NivDificultad.class);
+            Intent intent = new Intent(PregFacil.this, PerfilBueno.class);
             startActivity(intent);
 
 

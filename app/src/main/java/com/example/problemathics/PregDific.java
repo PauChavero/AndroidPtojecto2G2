@@ -240,7 +240,7 @@ public class PregDific extends AppCompatActivity {
         int id= item.getItemId();
 
         if(id == R.id.OpMenu1) {
-            Intent intent = new Intent(PregDific.this, NivDificultad.class);
+            Intent intent = new Intent(PregDific.this, PerfilBueno.class);
             startActivity(intent);
 
 
