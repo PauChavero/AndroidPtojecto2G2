@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5FAAB1"
+    android:background="#cc8304"
     tools:context=".MainActivity">
 
     <ImageView
@@ -30,7 +30,7 @@
         android:layout_marginEnd="101dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/nomActMain"
+        android:hint="@string/nomActMain"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/nomPassw"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,8 +46,8 @@
         android:layout_marginEnd="101dp"
         android:layout_marginBottom="264dp"
         android:ems="10"
+        android:hint="@string/ContraMain"
         android:inputType="textPassword"
-        android:text="@string/PasswActMain"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +65,7 @@
         android:background="#000000"
         android:backgroundTint="#000000"
         android:backgroundTintMode="add"
-        android:text="Iniciar Sessio"
+        android:text="@string/iniciar_sessio"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

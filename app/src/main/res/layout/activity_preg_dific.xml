@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5FAAB1"
+    android:background="#cc8304"
     tools:context=".PregFacil">
 
     <ImageView
@@ -23,41 +23,51 @@
         android:id="@+id/OpCioA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="370dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="153dp"
         android:text="@string/BtnOpcionA"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPreg" />
 
     <Button
         android:id="@+id/OpCioB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="370dp"
-        android:layout_marginEnd="70dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="153dp"
         android:text="@string/BtnOpcionB"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OpCioA" />
 
     <Button
         android:id="@+id/OpCioC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="153dp"
         android:text="@string/BtnOpcionC"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/OpCioA" />
+        app:layout_constraintTop_toBottomOf="@+id/OpCioB" />
 
     <Button
         android:id="@+id/OpCioD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="70dp"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="118dp"
         android:text="@string/BtnOpcionD"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/OpCioB" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OpCioC" />
 
     <TextView
         android:id="@+id/txtPreg"

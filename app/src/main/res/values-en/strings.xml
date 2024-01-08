@@ -9,7 +9,10 @@
 
     //Login Screen
     <string name="nomActMain">Name</string>
-    <string name="PasswActMain">Password</string>
+    <string name="ContraMain">Password</string>
+    <string name="iniciar_sessio">Log in</string>
+
+
 
     //Difficulty Level Screen
     <string name="nivDifInter">Intermediate</string>
@@ -32,7 +35,9 @@
     <string name="btn6EscUF">UF 6</string>
 
     <string name="Jungla">Jungle</string>
-    <string name="Jugar">Play</string>
+    <string name="BtnJugarNivDif">Play</string>
+
+    //Datos Usuario
 
     <string name="PerfilUsuari">User:</string>
     <string name="PerfilEmail">Email:</string>
@@ -40,4 +45,10 @@
     <string name="PerfilElo">Elo Multiplayer:</string>
     <string name="PerfilGuanyades">Games Won:</string>
     <string name="PerfilPerdudes">Games Lost:</string>
+
+    //Desplegable Fin Juego
+
+    <string name="VidasAcabadas">You have run out of lives. Do you want to return to the main menu?</string>
+    <string name="titFinJuego">¡Game over!</string>
+    <string name="RespuestaFinJuego">Yes</string>
 </resources>

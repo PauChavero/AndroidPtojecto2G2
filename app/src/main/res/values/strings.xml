@@ -8,7 +8,9 @@
 
     //Pantalla Login
     <string name="nomActMain">Nom</string>
-    <string name="PasswActMain">Contrasenya</string>
+    <string name="ContraMain">Contrasenya</string>
+    <string name="iniciar_sessio">Iniciar Sessio</string>
+
 
     //Pantalla Nivel de Dificultad
     <string name="nivDifInter">Intermedi</string>
@@ -31,8 +33,10 @@
     <string name="btn6EscUF">UF 6</string>
 
     <string name="Jungla">Jungla</string>
-    <string name="Jugar">Jugar</string>
+    <string name="BtnJugarNivDif">Jugar</string>
 
+
+    //Datos Usuario
     <string name="PerfilUsuari">Usuari:</string>
     <string name="PerfilEmail">Email:</string>
     <string name="PerfilPuntuacioSingle">Puntuació SinglePlayer:</string>
@@ -40,19 +44,10 @@
     <string name="PerfilGuanyades">Partides Guanyades:</string>
     <string name="PerfilPerdudes">Partides Perdudes:</string>
 
-    <string name="title_activity_perfil">Perfil</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    //Desplegable Fin Juego
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="perfil">Perfil</string>
-    //Preguntas Facil
+    <string name="VidasAcabadas">T´has quedat sense vides. Vols tornar al menú principal?</string>
+    <string name="titFinJuego">¡Joc terminat!</string>
+    <string name="RespuestaFinJuego">Sí</string>
 
-    //Preguntes Intermedi
-
-    //Preguntes Dificil
 </resources>

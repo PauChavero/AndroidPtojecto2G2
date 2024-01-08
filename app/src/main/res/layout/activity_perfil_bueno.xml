@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5FAAB1"
-    tools:context=".PerfilBueno" >
+    android:background="#cc8304"
+    tools:context=".PerfilBueno">
 
     <TextView
         android:id="@+id/nomUsuari"

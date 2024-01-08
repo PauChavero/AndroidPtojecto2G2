@@ -207,9 +207,9 @@ public class PregFacil extends AppCompatActivity {
 
     private void mostrarDialogoFinJuego() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("¡Juego terminado!")
-                .setMessage("Te has quedado sin vidas. ¿Quieres volver al menú principal?")
-                .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+        builder.setTitle(R.string.titFinJuego)
+                .setMessage(R.string.VidasAcabadas)
+                .setPositiveButton(R.string.RespuestaFinJuego, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         volverAlMenuPrincipal();
                     }

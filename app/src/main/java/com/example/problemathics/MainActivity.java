@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         EditText nomPersona = findViewById(R.id.nomId);
         EditText contraPersona = findViewById(R.id.nomPassw);
 
+
+
         Button btnLogin = findViewById(R.id.btnLogin);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {

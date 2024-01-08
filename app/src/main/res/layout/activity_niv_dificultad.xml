@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5FAAB1"
+    android:background="#cc8304"
     tools:context=".NivDificultad">
 
     <Button
@@ -23,6 +23,7 @@
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.166"
@@ -34,26 +35,32 @@
             android:id="@+id/radioButtonFacil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/nivDifFacil" />
+            android:text="@string/nivDifFacil"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/radioButtonIntermedi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/nivDifInter" />
+            android:text="@string/nivDifInter"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/radioButtonDificil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/nivDifDificil" />
+            android:text="@string/nivDifDificil"
+            android:textSize="24sp"
+            android:textStyle="bold" />
     </RadioGroup>
 
     <Button
         android:id="@+id/Jugar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jugar"
+        android:text="@string/BtnJugarNivDif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -65,6 +72,7 @@
         android:id="@+id/radioGruopUfs"
         android:layout_width="165dp"
         android:layout_height="293dp"
+        android:layout_marginStart="180dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.829"
@@ -76,37 +84,43 @@
             android:id="@+id/Uf1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Uf1" />
+            android:text="Uf1"
+            android:textSize="24sp" />
 
         <RadioButton
             android:id="@+id/Uf2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Uf2" />
+            android:text="Uf2"
+            android:textSize="24sp" />
 
         <RadioButton
             android:id="@+id/Uf3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Uf3" />
+            android:text="Uf3"
+            android:textSize="24sp" />
 
         <RadioButton
             android:id="@+id/Uf4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Uf4" />
+            android:text="Uf4"
+            android:textSize="24sp" />
 
         <RadioButton
             android:id="@+id/Uf5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Uf5" />
+            android:text="Uf5"
+            android:textSize="24sp" />
 
         <RadioButton
             android:id="@+id/Uf6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Uf6" />
+            android:text="Uf6"
+            android:textSize="24sp" />
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

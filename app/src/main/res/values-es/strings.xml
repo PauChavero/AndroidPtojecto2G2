@@ -9,7 +9,10 @@
 
     //Pantalla de Inicio de Sesión
     <string name="nomActMain">Nombre</string>
-    <string name="PasswActMain">Contraseña</string>
+    <string name="ContraMain">Contraseña</string>
+    <string name="iniciar_sessio">Iniciar Sessión</string>
+
+
 
     //Pantalla de Nivel de Dificultad
     <string name="nivDifInter">Intermedio</string>
@@ -33,7 +36,9 @@
     <string name="btn6EscUF">UF 6</string>
 
     <string name="Jungla">Jungla</string>
-    <string name="Jugar">Jugar</string>
+    <string name="BtnJugarNivDif">Jugar</string>
+
+    //Datos Usuario
 
     <string name="PerfilUsuari">Usuario:</string>
     <string name="PerfilEmail">Email:</string>
@@ -41,9 +46,11 @@
     <string name="PerfilElo">Elo Multijugador:</string>
     <string name="PerfilGuanyades">Partidas Ganadas:</string>
     <string name="PerfilPerdudes">Partidas Perdidas:</string>
-    //Preguntas Fáciles
 
-    //Preguntas Intermedias
+    //Desplegable Fin Juego
+    <string name="VidasAcabadas">Te has quedado sin vidas. ¿Quieres volver al menú principal?</string>
+    <string name="titFinJuego">¡Juego terminado!</string>
+    <string name="RespuestaFinJuego">Si</string>
 
-    //Preguntas Difíciles
+
 </resources>
