@@ -11,6 +11,7 @@
     <string name="nomActMain">Name</string>
     <string name="ContraMain">Password</string>
     <string name="iniciar_sessio">Log in</string>
+    <string name="btnMainRegist">Registrarse</string>
 
 
 
@@ -51,4 +52,14 @@
     <string name="VidasAcabadas">You have run out of lives. Do you want to return to the main menu?</string>
     <string name="titFinJuego">¡Game over!</string>
     <string name="RespuestaFinJuego">Yes</string>
+    <string name="vidas">Life\'s: </string>
+
+    //Registro de Usuarios
+    <string name="nameRegist">Name</string>
+    <string name="correuRegis">Email</string>
+    <string name="RegisContra1">Password</string>
+    <string name="RegisContra2">Repeat Password</string>
+    <string name="btnRegistrarse">Register</string>
+
+
 </resources>

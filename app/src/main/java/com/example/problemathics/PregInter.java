@@ -29,6 +29,8 @@ public class PregInter extends AppCompatActivity {
 
     int vidas = 3;
     int limitePreguntas = 10;
+
+
     Resposta respuestaCorrecta = null;
     List<Pregunta> listaPreguntas=new ArrayList<>();;
 
@@ -68,7 +70,7 @@ public class PregInter extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preg_facil);
         textVidas = findViewById(R.id.textVidas);
-        textVidas.setText(String.valueOf("Vidas: "+vidas));
+        textVidas.setText(String.valueOf(getString(R.string.vidas)+vidas));
         Call<Preguntes> call = preguntesAppApi.getPreguntes();
 
         call.enqueue(new Callback<Preguntes>() {
@@ -192,7 +194,7 @@ public class PregInter extends AppCompatActivity {
             // Puedes realizar acciones adicionales aquí
             vidas--;
             textVidas = findViewById(R.id.textVidas);
-            textVidas.setText(String.valueOf("Vidas: "+vidas));
+            textVidas.setText(String.valueOf(getString(R.string.vidas)+vidas));
             Log.d("Respuesta", "Respuesta incorrecta");
 
             if (vidas == 0) {

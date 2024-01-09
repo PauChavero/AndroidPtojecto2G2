@@ -27,9 +27,11 @@ public class Jungla extends AppCompatActivity {
 
     int i = 0;
     int vidas = 3;
+
     Resposta respuestaCorrecta = null;
     List<Pregunta> listaPreguntas=new ArrayList<>();;
 
+    TextView textVidas;
 
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("http://10.0.2.2:3001")
@@ -45,6 +47,9 @@ public class Jungla extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jungla);
+
+        textVidas = findViewById(R.id.textVidas);
+        textVidas.setText(String.valueOf(getString(R.string.vidas)+vidas));
 
         Call<Preguntes> call = preguntesAppApi.getPreguntes();
 
@@ -151,8 +156,8 @@ public class Jungla extends AppCompatActivity {
             // La respuesta es incorrecta
             // Puedes realizar acciones adicionales aquí
             vidas--;
-            textVidas = findViewById(R.id.textVidas);
-            textVidas.setText(String.valueOf("Vidas: "+vidas));
+            textVidas= findViewById(R.id.textVidas);
+            textVidas.setText(String.valueOf(getString(R.string.vidas)+vidas));
             Log.d("Respuesta", "Respuesta incorrecta");
 
             if (vidas == 0) {

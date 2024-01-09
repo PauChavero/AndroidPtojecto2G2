@@ -31,6 +31,15 @@ public class MainActivity extends AppCompatActivity {
         EditText contraPersona = findViewById(R.id.nomPassw);
 
 
+        Button btnRegistre = findViewById(R.id.btnRegistre);
+
+        btnRegistre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Registro.class);
+                startActivity(intent);
+            }
+        });
 
         Button btnLogin = findViewById(R.id.btnLogin);
 

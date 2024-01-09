@@ -10,6 +10,7 @@
     <string name="nomActMain">Nom</string>
     <string name="ContraMain">Contrasenya</string>
     <string name="iniciar_sessio">Iniciar Sessio</string>
+    <string name="btnMainRegist">Registrarse</string>
 
 
     //Pantalla Nivel de Dificultad
@@ -49,5 +50,14 @@
     <string name="VidasAcabadas">T´has quedat sense vides. Vols tornar al menú principal?</string>
     <string name="titFinJuego">¡Joc terminat!</string>
     <string name="RespuestaFinJuego">Sí</string>
+    <string name="vidas">\Vidas:</string>
+
+    //Registro de Usuarios
+    <string name="nameRegist">Nom</string>
+    <string name="correuRegis">Correu</string>
+    <string name="RegisContra1">Contrasenya</string>
+    <string name="RegisContra2">Repeteix la contrasenya</string>
+    <string name="btnRegistrarse">Registrarse</string>
+
 
 </resources>
