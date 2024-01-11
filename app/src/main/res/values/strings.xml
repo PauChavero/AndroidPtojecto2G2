@@ -59,5 +59,9 @@
     <string name="RegisContra2">Repeteix la contrasenya</string>
     <string name="btnRegistrarse">Registrarse</string>
 
+    //Titulos
+    <string name="dades_usuari">Dades Usuari</string>
+    <string name="ranquing">Ranquing</string>
+
 
 </resources>

@@ -61,5 +61,10 @@
     <string name="RegisContra2">Repeat Password</string>
     <string name="btnRegistrarse">Register</string>
 
+    //Titulos
+    <string name="dades_usuari">User Data</string>
+    <string name="ranquing">Ranking</string>
+
+
 
 </resources>
