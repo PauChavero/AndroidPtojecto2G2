@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                     DatosEnviar datosEnviar = new DatosEnviar(username, password);
 
                     Retrofit retrofit = new Retrofit.Builder()
-                            .baseUrl("http://10.0.2.2:3001")
+                            .baseUrl("http://problemathics.dam.inspedralbes.cat:3001")
                             .addConverterFactory(GsonConverterFactory.create())
                             .build();
 
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                                 if ("Inicio de sesión exitoso".equals(mensaje)) {
 
                                     Retrofit retrofit2 = new Retrofit.Builder()
-                                            .baseUrl("http://10.0.2.2:3001")
+                                            .baseUrl("http://problemathics.dam.inspedralbes.cat:3001")
                                             .addConverterFactory(GsonConverterFactory.create())
                                             .build();
 
