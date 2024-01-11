@@ -12,8 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="180dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginEnd="80dp"
         android:text="usua"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,59 +22,66 @@
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="205dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="80dp"
         android:text="mail"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/nomUsuari" />
 
     <TextView
         android:id="@+id/puntuacioSingle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="230dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="80dp"
         android:text="singe"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <TextView
         android:id="@+id/eloMulti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="255dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="80dp"
         android:text="multi"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/puntuacioSingle" />
 
     <TextView
         android:id="@+id/partidesGuanyades"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="280dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="80dp"
         android:text="gua"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/eloMulti" />
 
     <TextView
         android:id="@+id/partidesPerdudes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="305dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="80dp"
         android:text="Perd"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/partidesGuanyades" />
 
     <TextView
         android:id="@+id/textUsuari"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="180dp"
         android:text="@string/PerfilUsuari"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -81,50 +89,60 @@
         android:id="@+id/textEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="205dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
         android:text="@string/PerfilEmail"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textUsuari" />
 
     <TextView
         android:id="@+id/textSingle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="230dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
         android:text="@string/PerfilPuntuacioSingle"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textEmail" />
 
     <TextView
         android:id="@+id/textMulti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="255dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
         android:text="@string/PerfilElo"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textSingle" />
 
     <TextView
         android:id="@+id/textGuanyades"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
         android:text="@string/PerfilGuanyades"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textMulti" />
 
     <TextView
         android:id="@+id/textPerdudes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="305dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
         android:text="@string/PerfilPerdudes"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textGuanyades" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

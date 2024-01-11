@@ -8,25 +8,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orderInCategory="104"
-        android:title="@string/OpMenu1" />
+        android:title="@string/OpMenu1"
+        android:background="#cc8304"/>
     <item
         android:id="@+id/OpMenu2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orderInCategory="104"
-        android:title="@string/OpMenu2" />
+        android:title="@string/OpMenu2"
+        android:background="#cc8304"/>
 
     <item
         android:id="@+id/OpMenuRanquing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orderInCategory="104"
-        android:title="Ranquing" />
+        android:title="Ranquing"
+        android:background="#cc8304"/>
 
     <item
         android:id="@+id/OpMenuSalir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orderInCategory="104"
-        android:title="@string/OpMenSalir" />
+        android:title="@string/OpMenSalir"
+        android:background="#cc8304"/>
 </menu>
