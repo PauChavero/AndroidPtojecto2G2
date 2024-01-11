@@ -40,7 +40,7 @@ public class PregInter extends AppCompatActivity {
 
     String ufSeleccionadaInt = "";
     Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("http://10.0.2.2:3001")
+            .baseUrl("http://problemathics.dam.inspedralbes.cat:3001")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 
