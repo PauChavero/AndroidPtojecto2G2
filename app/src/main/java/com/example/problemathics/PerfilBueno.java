@@ -59,6 +59,9 @@ public class PerfilBueno extends AppCompatActivity {
             Intent intent = new Intent(PerfilBueno.this,NivDificultad.class);
             startActivity(intent);
 
+        }else if (id == R.id.OpMenuRanquing){
+            Intent intent = new Intent(PerfilBueno.this, Ranquing.class);
+            startActivity(intent);
         }
         else if (id == R.id.OpMenuSalir){
             Intent intent = new Intent(Intent.ACTION_MAIN);
