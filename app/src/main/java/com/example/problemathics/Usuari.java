@@ -56,6 +56,11 @@ public class Usuari {
         return partidesGuanyades;
     }
 
+    public String getRanquing() {
+        String resultat = this.nomUsuari+"  "+this.eloMulti+"  Guanyades: "+this.partidesGuanyades+"  Perdudes: "+this.partidesPerdudes;
+        return resultat;
+    }
+
     public void setPartidesGuanyades(int partidesGuanyades) {
         this.partidesGuanyades = partidesGuanyades;
     }

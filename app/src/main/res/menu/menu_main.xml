@@ -15,7 +15,14 @@
         android:layout_height="wrap_content"
         android:orderInCategory="104"
         android:title="@string/OpMenu2" />
-    
+
+    <item
+        android:id="@+id/OpMenuRanquing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orderInCategory="104"
+        android:title="Ranquing" />
+
     <item
         android:id="@+id/OpMenuSalir"
         android:layout_width="wrap_content"
